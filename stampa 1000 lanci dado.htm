@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lancio dado</title>
+</head>
+<body>
+<p id="out1"></p>
+<script>
+   let dado=0;
+   let casuale=0;
+   let occorrenza1=0;
+   let occorrenza2=0;
+   let occorrenza3=0;
+   let occorrenza4=0;
+   let occorrenza5=0;
+   let occorrenza6=0;
+   //genera un numero compreso tra 0 e 1
+// 0 è incluso 1 escluso
+for(let i=0;i<1000;i++)
+{
+ do{
+     dado=Math.round(Math.random()*7);
+ }while(dado==0 || dado==7);
+ 
+ document.write("<span style='color:red'>" + dado + "</span>" + " ");
+ 
+ document.write(dado+ " ");
+if(dado==6)
+{
+   occorrenza6++;
+}
+if(dado==1)
+{
+  occorrenza1++;
+}
+if(dado==2)
+{
+   occorrenza2++;
+}
+if(dado==3)
+{
+   occorrenza3++;
+}
+if(dado==4)
+{
+   occorrenza4++;
+}
+if(dado==5)
+{
+  occorrenza5++;
+}
+if(dado==10)
+{
+ document.write("Hai vinto!")
+}
+ 
+}
+ 
+ 
+ 
+document.write("<br>"+i+ " lanci del dado ");
+</script>
+ 
+ 
+</body>
+</html>
+
